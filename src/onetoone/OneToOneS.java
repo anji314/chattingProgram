@@ -35,9 +35,9 @@ public OneToOneS() {
 	
 }
 public void runServer() {
-	ServerSocket server;
+	ServerSocket server=null;
 	try {
-		server=new ServerSocket(5000,100);
+		server=new ServerSocket(7777);
 		connection=server.accept();
 		InputStream is=connection.getInputStream();
 		InputStreamReader isr=new InputStreamReader(is);

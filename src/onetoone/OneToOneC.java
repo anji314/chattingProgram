@@ -42,7 +42,8 @@ public class OneToOneC extends Frame implements ActionListener {
 	
 	public void runClient() {
 		try {
-			client= new Socket(InetAddress.getLocalHost(),5000);
+			String serverIP="10.2.0.134";
+			client= new Socket(serverIP,7777);
 			input=new BufferedReader(new InputStreamReader(client.getInputStream()));
 			output= new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 			while(true) {
